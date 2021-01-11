@@ -16,10 +16,7 @@
     "outDir": "./dist",
     "removeComments": false,
     "sourceMap": true,
-    "target": "es2015",
-    "baseUrl": "./src/components/",
-    "downlevelIteration": true,
-    "importHelpers": true
+    "target": "es2015"
   },
   "include": [
     "src/**/*.ts"
@@ -37,8 +34,7 @@
     "rewriteTsconfig": false
   },
   "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true,
+    "skipTemplateCodegen": true,
     "strictMetadataEmit": true,
     "enableResourceInlining": true,
     "genDir": "./dist"
