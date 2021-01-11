@@ -19,7 +19,40 @@ const NUM_OF_MONTHS_TO_CREATE = 3;
 
 @Component({
   selector: 'ion-calendar-modal',
-  styleUrls: ['./calendar.modal.scss'],
+  styles: [`
+  :host {
+    ion-select {
+      max-width: unset;
+      .select-icon > .select-icon-inner,
+      .select-text {
+        color: #fff !important;
+      }
+      &.select-ios {
+        max-width: unset;
+      }
+    }
+  
+    .calendar-page {
+      background-color: #fbfbfb;
+    }
+  
+    .month-box {
+      display: inline-block;
+      width: 100%;
+      padding-bottom: 1em;
+      border-bottom: 1px solid #f1f1f1;
+    }
+  
+    h4 {
+      font-weight: 400;
+      font-size: 1.1rem;
+      display: block;
+      text-align: center;
+      margin: 1rem 0 0;
+      color: #929292;
+    }
+  }
+  `],
   template: `
     <ion-header>
       <ion-toolbar [color]="_d.color">

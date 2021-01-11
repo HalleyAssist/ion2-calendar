@@ -32,7 +32,69 @@ interface CompatibleIcons {
 @Component({
   selector: 'ion-calendar',
   providers: [ION_CAL_VALUE_ACCESSOR],
-  styleUrls: ['./calendar.component.scss'],
+  styles: [`
+  :host {
+  $btn-width: 40px;
+
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: #fff;
+  width: 100%;
+
+  .title {
+    padding: 0 $btn-width 0 $btn-width;
+    overflow: hidden;
+
+    .back,
+    .forward,
+    .switch-btn {
+      display: block;
+      position: relative;
+      float: left;
+      min-height: 32px;
+      margin: 0;
+      padding: 0;
+      --padding-start: 0;
+      --padding-end: 0;
+      font-size: 15px;
+    }
+
+    .back,
+    .forward {
+      color: #757575;
+    }
+
+    .back {
+      margin-left: -100%;
+      left: -$btn-width;
+      width: $btn-width;
+    }
+
+    .forward {
+      margin-left: -$btn-width;
+      right: -$btn-width;
+      width: $btn-width;
+    }
+
+    .switch-btn {
+      --margin-top: 0;
+      --margin-bottom: 0;
+      --margin-start: auto;
+      --margin-end: auto;
+
+      width: 100%;
+      text-align: center;
+      line-height: 32px;
+      color: #757575;
+
+      .arrow-dropdown {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+`],
   template: `
     <div class="title">
       <ng-template [ngIf]="_showMonthPicker" [ngIfElse]="title">
