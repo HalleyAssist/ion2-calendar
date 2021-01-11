@@ -109,7 +109,7 @@ export class CalendarModal implements OnInit, AfterViewInit {
     public modalCtrl: ModalController,
     public ref: ChangeDetectorRef,
     public calSvc: CalendarService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.init();
@@ -285,17 +285,17 @@ export class CalendarModal implements OnInit, AfterViewInit {
     const { detail } = $event;
 
     if (detail.scrollTop <= 200 && detail.velocityY < 0 && this._scrollLock) {
-      this.content.getScrollElement().then(scrollElem => {
+      this.content.getScrollElement().then(() => {
         this._scrollLock = !1;
 
-        const heightBeforeMonthPrepend = scrollElem.scrollHeight;
+        // const heightBeforeMonthPrepend = scrollElem.scrollHeight;
         this.backwardsMonth();
         setTimeout(() => {
-          const heightAfterMonthPrepend = scrollElem.scrollHeight;
+          //  const heightAfterMonthPrepend = scrollElem.scrollHeight;
 
-          this.content.scrollByPoint(0, heightAfterMonthPrepend - heightBeforeMonthPrepend, 0).then(() => {
-            this._scrollLock = !0;
-          });
+          // this.content.scrollByPoint(0, heightAfterMonthPrepend - heightBeforeMonthPrepend, 0).then(() => {
+          this._scrollLock = !0;
+          // });
         }, 180);
       });
     }
