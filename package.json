@@ -2,8 +2,8 @@
   "name": "ion2-calendar",
   "version": "3.5.0",
   "description": "A date picker component for ionic2 ",
-  "main": "./src/index.ts",
-  "typings": "./src/index.ts",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "scripts": {
     "start": "cd ./dev && npm start",
     "clean:dist": "rm -rf dist",
