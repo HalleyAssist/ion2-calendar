@@ -60,6 +60,7 @@ export interface CalendarModalOptions extends CalendarOptions {
   clearLabel?: string;
   closeIcon?: boolean;
   doneIcon?: boolean;
+  clearIcon?: boolean;
   canBackwardsSelected?: boolean;
   title?: string;
   defaultScrollTo?: Date;
