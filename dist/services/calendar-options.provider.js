@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-exports.DEFAULT_CALENDAR_OPTIONS = new core_1.InjectionToken('DEFAULT_CALENDAR_MODAL_OPTIONS');
+import { InjectionToken } from '@angular/core';
+export const DEFAULT_CALENDAR_OPTIONS = new InjectionToken('DEFAULT_CALENDAR_MODAL_OPTIONS');
 //# sourceMappingURL=calendar-options.provider.js.map

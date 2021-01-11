@@ -1,15 +1,13 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var calendar_modal_1 = require("./calendar.modal");
-var calendar_week_component_1 = require("./calendar-week.component");
-var month_component_1 = require("./month.component");
-var calendar_component_1 = require("./calendar.component");
-var month_picker_component_1 = require("./month-picker.component");
-exports.CALENDAR_COMPONENTS = [
-    calendar_modal_1.CalendarModal,
-    calendar_week_component_1.CalendarWeekComponent,
-    month_component_1.MonthComponent,
-    calendar_component_1.CalendarComponent,
-    month_picker_component_1.MonthPickerComponent
+import { CalendarModal } from "./calendar.modal";
+import { CalendarWeekComponent } from "./calendar-week.component";
+import { MonthComponent } from "./month.component";
+import { CalendarComponent } from "./calendar.component";
+import { MonthPickerComponent } from "./month-picker.component";
+export const CALENDAR_COMPONENTS = [
+    CalendarModal,
+    CalendarWeekComponent,
+    MonthComponent,
+    CalendarComponent,
+    MonthPickerComponent
 ];
 //# sourceMappingURL=index.js.map

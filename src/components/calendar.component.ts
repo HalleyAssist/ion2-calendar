@@ -14,7 +14,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import * as moment from 'moment';
 import { defaults, pickModes } from '../config';
-import {isIonIconsV4} from "../utils/icons";
+import { isIonIconsV4 } from "../utils/icons";
 
 export const ION_CAL_VALUE_ACCESSOR: Provider = {
   provide: NG_VALUE_ACCESSOR,
@@ -307,9 +307,9 @@ export class CalendarComponent implements ControlValueAccessor, OnInit {
     }
   }
 
-  _onChanged: Function = () => {};
+  _onChanged: Function = () => { };
 
-  _onTouched: Function = () => {};
+  _onTouched: Function = () => { };
 
   _payloadToTimeNumber(value: CalendarComponentPayloadTypes): number {
     let date;
@@ -359,8 +359,9 @@ export class CalendarComponent implements ControlValueAccessor, OnInit {
         return date.valueOf();
       case 'object':
         return date.toObject();
+      default:
+        return date;
     }
-    return date;
   }
 
   writeValue(obj: any): void {
