@@ -24,7 +24,7 @@ const NUM_OF_MONTHS_TO_CREATE = 3;
     <ion-header>
       <ion-toolbar [color]="_d.color">
           <ion-buttons slot="start">
-              <ion-button type='button' slot="icon-only" fill="clear" (click)="onCancel()">
+            <ion-button type='button' slot="icon-only" fill="clear" (click)="onCancel()">
               <span *ngIf="_d.closeLabel !== '' && !_d.closeIcon">{{ _d.closeLabel }}</span>
               <ion-icon *ngIf="_d.closeIcon" name="close"></ion-icon>
             </ion-button>
@@ -33,7 +33,7 @@ const NUM_OF_MONTHS_TO_CREATE = 3;
           <ion-title>{{ _d.title }}</ion-title>
 
           <ion-buttons slot="end">
-            <ion-button type='button' slot="icon-only" *ngIf="!!_d.clearLabel || !!_d.clearIcon" fill="clear" [disabled]="!canClear()" (click)="clear()">
+            <ion-button type='button' slot="icon-only" fill="clear" *ngIf="!!_d.clearLabel || !!_d.clearIcon" [disabled]="!canClear()" (click)="clear()">
               <span *ngIf="_d.clearLabel !== '' && !_d.clearIcon">{{ _d.clearLabel }}</span>
               <ion-icon *ngIf="_d.clearIcon" name="refresh"></ion-icon>
             </ion-button>

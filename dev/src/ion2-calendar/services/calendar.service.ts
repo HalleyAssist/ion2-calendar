@@ -46,6 +46,7 @@ export class CalendarService {
       canBackwardsSelected = false,
       closeIcon = false,
       doneIcon = false,
+      clearIcon = false,
       showYearPicker = false,
       isSaveHistory = false,
       pickMode = pickModes.SINGLE,
@@ -88,7 +89,8 @@ export class CalendarService {
       defaultDateRange: calendarOptions.defaultDateRange || null,
       showAdjacentMonthDay,
       defaultEndDateToStartDate,
-      clearLabel
+      clearLabel,
+      clearIcon,
     };
   }
 
