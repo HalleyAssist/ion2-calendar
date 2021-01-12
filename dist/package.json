@@ -1,0 +1,32 @@
+{
+  "name": "ion2-calendar",
+  "version": "3.6.0",
+  "description": "A date picker component for ionic2 ",
+  "main": "bundles/ion2-calendar.umd.js",
+  "typings": "ion2-calendar.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HsuanXyz/ion2-calendar.git"
+  },
+  "keywords": [
+    "ionic2",
+    "calendar",
+    "Datepicker",
+    "date-range"
+  ],
+  "author": "HsuanLee",
+  "license": "MIT",
+  "peerDependencies": {
+    "moment": "^2.19.3"
+  },
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "module": "fesm2015/ion2-calendar.js",
+  "es2015": "fesm2015/ion2-calendar.js",
+  "esm2015": "esm2015/ion2-calendar.js",
+  "fesm2015": "fesm2015/ion2-calendar.js",
+  "metadata": "ion2-calendar.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

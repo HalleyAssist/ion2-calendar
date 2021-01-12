@@ -11,3 +11,9 @@ export const CALENDAR_COMPONENTS = [
   CalendarComponent,
   MonthPickerComponent
 ];
+
+export { CalendarModal } from './calendar.modal';
+export { CalendarWeekComponent } from './calendar-week.component';
+export { MonthComponent } from './month.component';
+export { CalendarComponent } from './calendar.component';
+export { MonthPickerComponent } from './month-picker.component';
