@@ -1,9 +1,9 @@
 {
-  "name": "ion2-calendar",
+  "name": "@googlproxer/ion2-calendar",
   "version": "3.6.0",
-  "description": "A date picker component for ionic2 ",
-  "main": "./dist/bundles/ion2-calendar.umd.js",
-  "typings": "./dist/ion2-calendar.d.ts",
+  "description": "A date picker component for ionic2+",
+  "main": "./dist/index.ts",
+  "typings": "./dist/index.d.ts",
   "scripts": {
     "start": "cd ./dev && npm start",
     "clean:dist": "rm -rf dist",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/HsuanXyz/ion2-calendar.git"
+    "url": "https://github.com/HalleyAssist/ion2-calendar.git"
   },
   "devDependencies": {
     "@angular-devkit/core": "^11.0.6",
@@ -40,7 +40,7 @@
     "gulp-ext-replace": "^0.3.0",
     "gulp-sass": "^4.0.1",
     "ionicons": "5.1.2",
-    "moment": "^2.23.0",
+    "moment": "^2.29.1",
     "ng-packagr": "^11.0.3",
     "npm-run-all": "^4.1.2",
     "rxjs": "6.6.3",
@@ -59,7 +59,7 @@
   "author": "HsuanLee",
   "license": "MIT",
   "peerDependencies": {
-    "moment": "^2.19.3"
+    "moment": "^2.29.1"
   },
   "$schema": "./node_modules/ng-packagr/package.schema.json",
   "ngPackage": {
