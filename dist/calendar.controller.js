@@ -20,6 +20,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CalendarController = void 0;
 var core_1 = require("@angular/core");
 var angular_1 = require("@ionic/angular");
 var calendar_modal_1 = require("./components/calendar.modal");

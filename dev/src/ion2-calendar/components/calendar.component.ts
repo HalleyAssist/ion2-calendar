@@ -14,7 +14,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import * as moment from 'moment';
 import { defaults, pickModes } from '../config';
-import {isIonIconsV4} from "../utils/icons";
+import { isIonIconsV4 } from '../utils/icons';
 
 export const ION_CAL_VALUE_ACCESSOR: Provider = {
   provide: NG_VALUE_ACCESSOR,
@@ -39,7 +39,6 @@ interface CompatibleIcons {
         <ion-button type="button"
                     fill="clear"
                     class="switch-btn"
-                    [attr.aria-label]="getDate(monthOpt.original.time) | date:MONTH_DATE_FORMAT"
                     (click)="switchView()">
           {{ _monthFormat(monthOpt.original.time) }}
           <ion-icon class="arrow-dropdown"
@@ -47,8 +46,7 @@ interface CompatibleIcons {
         </ion-button>
       </ng-template>
       <ng-template #title>
-        <div class="switch-btn"
-             [attr.aria-label]="getDate(monthOpt.original.time) | date:MONTH_DATE_FORMAT">
+        <div class="switch-btn">
           {{ _monthFormat(monthOpt.original.time) }}
         </div>
       </ng-template>
@@ -307,9 +305,9 @@ export class CalendarComponent implements ControlValueAccessor, OnInit {
     }
   }
 
-  _onChanged: Function = () => {};
+  _onChanged: Function = () => { };
 
-  _onTouched: Function = () => {};
+  _onTouched: Function = () => { };
 
   _payloadToTimeNumber(value: CalendarComponentPayloadTypes): number {
     let date;
@@ -359,8 +357,9 @@ export class CalendarComponent implements ControlValueAccessor, OnInit {
         return date.valueOf();
       case 'object':
         return date.toObject();
+      default:
+        return date;
     }
-    return date;
   }
 
   writeValue(obj: any): void {

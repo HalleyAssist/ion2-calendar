@@ -23,13 +23,12 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CalendarService = void 0;
 var core_1 = require("@angular/core");
 var moment = require("moment");
 var config_1 = require("../config");
 var calendar_options_provider_1 = require("./calendar-options.provider");
 var isBoolean = function (input) { return input === true || input === false; };
-var ɵ0 = isBoolean;
-exports.ɵ0 = ɵ0;
 var CalendarService = /** @class */ (function () {
     function CalendarService(defaultOpts) {
         this.defaultOpts = defaultOpts;
@@ -38,14 +37,14 @@ var CalendarService = /** @class */ (function () {
         get: function () {
             return 12;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     CalendarService.prototype.safeOpt = function (calendarOptions) {
         if (calendarOptions === void 0) { calendarOptions = {}; }
         var _disableWeeks = [];
         var _daysConfig = [];
-        var _a = __assign({}, this.defaultOpts, calendarOptions), _b = _a.from, from = _b === void 0 ? new Date() : _b, _c = _a.to, to = _c === void 0 ? 0 : _c, _d = _a.weekStart, weekStart = _d === void 0 ? 0 : _d, _e = _a.step, step = _e === void 0 ? this.DEFAULT_STEP : _e, _f = _a.id, id = _f === void 0 ? '' : _f, _g = _a.cssClass, cssClass = _g === void 0 ? '' : _g, _h = _a.closeLabel, closeLabel = _h === void 0 ? 'CANCEL' : _h, _j = _a.doneLabel, doneLabel = _j === void 0 ? 'DONE' : _j, _k = _a.monthFormat, monthFormat = _k === void 0 ? 'MMM YYYY' : _k, _l = _a.title, title = _l === void 0 ? 'CALENDAR' : _l, _m = _a.defaultTitle, defaultTitle = _m === void 0 ? '' : _m, _o = _a.defaultSubtitle, defaultSubtitle = _o === void 0 ? '' : _o, _p = _a.autoDone, autoDone = _p === void 0 ? false : _p, _q = _a.canBackwardsSelected, canBackwardsSelected = _q === void 0 ? false : _q, _r = _a.closeIcon, closeIcon = _r === void 0 ? false : _r, _s = _a.doneIcon, doneIcon = _s === void 0 ? false : _s, _t = _a.clearIcon, clearIcon = _t === void 0 ? false : _t, _u = _a.showYearPicker, showYearPicker = _u === void 0 ? false : _u, _v = _a.isSaveHistory, isSaveHistory = _v === void 0 ? false : _v, _w = _a.pickMode, pickMode = _w === void 0 ? config_1.pickModes.SINGLE : _w, _x = _a.color, color = _x === void 0 ? config_1.defaults.COLOR : _x, _y = _a.weekdays, weekdays = _y === void 0 ? config_1.defaults.WEEKS_FORMAT : _y, _z = _a.daysConfig, daysConfig = _z === void 0 ? _daysConfig : _z, _0 = _a.disableWeeks, disableWeeks = _0 === void 0 ? _disableWeeks : _0, _1 = _a.showAdjacentMonthDay, showAdjacentMonthDay = _1 === void 0 ? true : _1, _2 = _a.defaultEndDateToStartDate, defaultEndDateToStartDate = _2 === void 0 ? false : _2, _3 = _a.clearLabel, clearLabel = _3 === void 0 ? null : _3;
+        var _a = __assign(__assign({}, this.defaultOpts), calendarOptions), _b = _a.from, from = _b === void 0 ? new Date() : _b, _c = _a.to, to = _c === void 0 ? 0 : _c, _d = _a.weekStart, weekStart = _d === void 0 ? 0 : _d, _e = _a.step, step = _e === void 0 ? this.DEFAULT_STEP : _e, _f = _a.id, id = _f === void 0 ? '' : _f, _g = _a.cssClass, cssClass = _g === void 0 ? '' : _g, _h = _a.closeLabel, closeLabel = _h === void 0 ? 'CANCEL' : _h, _j = _a.doneLabel, doneLabel = _j === void 0 ? 'DONE' : _j, _k = _a.monthFormat, monthFormat = _k === void 0 ? 'MMM YYYY' : _k, _l = _a.title, title = _l === void 0 ? 'CALENDAR' : _l, _m = _a.defaultTitle, defaultTitle = _m === void 0 ? '' : _m, _o = _a.defaultSubtitle, defaultSubtitle = _o === void 0 ? '' : _o, _p = _a.autoDone, autoDone = _p === void 0 ? false : _p, _q = _a.canBackwardsSelected, canBackwardsSelected = _q === void 0 ? false : _q, _r = _a.closeIcon, closeIcon = _r === void 0 ? false : _r, _s = _a.doneIcon, doneIcon = _s === void 0 ? false : _s, _t = _a.clearIcon, clearIcon = _t === void 0 ? false : _t, _u = _a.showYearPicker, showYearPicker = _u === void 0 ? false : _u, _v = _a.isSaveHistory, isSaveHistory = _v === void 0 ? false : _v, _w = _a.pickMode, pickMode = _w === void 0 ? config_1.pickModes.SINGLE : _w, _x = _a.color, color = _x === void 0 ? config_1.defaults.COLOR : _x, _y = _a.weekdays, weekdays = _y === void 0 ? config_1.defaults.WEEKS_FORMAT : _y, _z = _a.daysConfig, daysConfig = _z === void 0 ? _daysConfig : _z, _0 = _a.disableWeeks, disableWeeks = _0 === void 0 ? _disableWeeks : _0, _1 = _a.showAdjacentMonthDay, showAdjacentMonthDay = _1 === void 0 ? true : _1, _2 = _a.defaultEndDateToStartDate, defaultEndDateToStartDate = _2 === void 0 ? false : _2, _3 = _a.clearLabel, clearLabel = _3 === void 0 ? null : _3;
         return {
             id: id,
             from: from,

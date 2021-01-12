@@ -32,8 +32,7 @@ export const MONTH_VALUE_ACCESSOR: any = {
                         [class.last-month-day]="day.isLastMonth"
                         [class.next-month-day]="day.isNextMonth"
                         [class.on-selected]="isSelected(day.time)"
-                        [disabled]="day.disable"
-                        [attr.aria-label]="getDayLabel(day) | date:DAY_DATE_FORMAT">
+                        [disabled]="day.disable">
                   <p>{{ day.title }}</p>
                   <small *ngIf="day.subTitle">{{ day?.subTitle }}</small>
                 </button>

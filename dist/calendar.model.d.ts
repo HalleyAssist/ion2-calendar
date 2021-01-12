@@ -43,6 +43,23 @@ export interface ModalOptions {
     enterAnimation?: AnimationBuilder;
     leaveAnimation?: AnimationBuilder;
 }
+export interface CalendarOptions {
+    from?: Date | number;
+    to?: Date | number;
+    pickMode?: string;
+    weekStart?: number;
+    disableWeeks?: Array<number>;
+    weekdays?: Array<string>;
+    monthFormat?: string;
+    color?: string;
+    defaultTitle?: string;
+    defaultSubtitle?: string;
+    daysConfig?: Array<DayConfig>;
+    /**
+     * show last month & next month days fill six weeks
+     */
+    showAdjacentMonthDay?: boolean;
+}
 export interface CalendarModalOptions extends CalendarOptions {
     autoDone?: boolean;
     format?: string;
@@ -70,23 +87,6 @@ export interface CalendarModalOptions extends CalendarOptions {
      */
     showYearPicker?: boolean;
     defaultEndDateToStartDate?: boolean;
-}
-export interface CalendarOptions {
-    from?: Date | number;
-    to?: Date | number;
-    pickMode?: string;
-    weekStart?: number;
-    disableWeeks?: Array<number>;
-    weekdays?: Array<string>;
-    monthFormat?: string;
-    color?: string;
-    defaultTitle?: string;
-    defaultSubtitle?: string;
-    daysConfig?: Array<DayConfig>;
-    /**
-     * show last month & next month days fill six weeks
-     */
-    showAdjacentMonthDay?: boolean;
 }
 export interface CalendarComponentOptions extends CalendarOptions {
     showToggleButtons?: boolean;

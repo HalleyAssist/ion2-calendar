@@ -10,7 +10,7 @@ import { defaults } from '../config';
       <div class="month-packer-item"
            [class.this-month]=" i === _thisMonth.getMonth() && month.original.year === _thisMonth.getFullYear()"
            *ngFor="let item of _monthFormat; let i = index">
-        <button type="button" (click)="_onSelect(i)" [attr.aria-label]="getDate(i) | date:MONTH_FORMAT">{{ item }}</button>
+        <button type="button" (click)="_onSelect(i)">{{ item }}</button>
       </div>
     </div>
   `,

@@ -33,7 +33,8 @@ const NUM_OF_MONTHS_TO_CREATE = 3;
           <ion-title>{{ _d.title }}</ion-title>
 
           <ion-buttons slot="end">
-            <ion-button type='button' slot="icon-only" fill="clear" *ngIf="!!_d.clearLabel || !!_d.clearIcon" [disabled]="!canClear()" (click)="clear()">
+            <ion-button type='button' slot="icon-only" fill="clear" *ngIf="!!_d.clearLabel || !!_d.clearIcon"
+              [disabled]="!canClear()" (click)="clear()">
               <span *ngIf="_d.clearLabel !== '' && !_d.clearIcon">{{ _d.clearLabel }}</span>
               <ion-icon *ngIf="_d.clearIcon" name="refresh"></ion-icon>
             </ion-button>
